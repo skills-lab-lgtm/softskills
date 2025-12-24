@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Soft Skills Project</title>
+
+  <!-- Fonts & Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="header">
+  <div class="logo">SoftSkills</div>
+
+  <nav>
+    <a href="#about">О проекте</a>
+    <a href="#skills">Навыки</a>
+    <a href="#research">Исследования</a>
+    <a href="#articles">Статьи</a>
+    <a href="#methods">Методы</a>
+    <a href="#tools">Инструменты</a>
+    <a href="#contacts">Контакты</a>
+  </nav>
+
+  <button id="langBtn">EN</button>
+</header>
+
+<section class="hero">
+  <h1 data-ru="Развитие Soft Skills" data-en="Soft Skills Development"></h1>
+  <p data-ru="Гибкие навыки — ключ к успеху в учебе, карьере и жизни"
+     data-en="Soft skills are the key to success in education, career and life"></p>
+  <button class="primary-btn">Начать изучение</button>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="section reveal">
+  <h2>О проекте</h2>
+  <p>
+    Проект посвящён изучению и развитию гибких навыков (soft skills),
+    которые напрямую влияют на мотивацию, адаптацию, коммуникацию
+    и успешность человека в современном мире.
+  </p>
+
+  <div class="info-grid">
+    <div class="info-card"> Повышение мотивации</div>
+    <div class="info-card"> Улучшение общения</div>
+    <div class="info-card"> Развитие мышления</div>
+    <div class="info-card"> Карьерный рост</div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills" class="section reveal">
+  <h2>Ключевые навыки</h2>
+
+  <div class="skills-grid">
+    <div class="skill-card" onclick="toggleSkill(this)">
+       Коммуникация
+      <div class="skill-info">
+        Умение ясно выражать мысли, слушать собеседника, вести диалог,
+        аргументировать позицию и работать в команде.
+      </div>
+    </div>
+
+    <div class="skill-card" onclick="toggleSkill(this)">
+       Критическое мышление
+      <div class="skill-info">
+        Анализ информации, выявление причин, логическое мышление,
+        умение принимать взвешенные решения.
+      </div>
+    </div>
+
+    <div class="skill-card" onclick="toggleSkill(this)">
+       Эмоциональный интеллект
+      <div class="skill-info">
+        Осознание эмоций, самоконтроль, эмпатия и управление стрессом.
+      </div>
+    </div>
+
+    <div class="skill-card" onclick="toggleSkill(this)">
+       Управление временем
+      <div class="skill-info">
+        Планирование задач, расстановка приоритетов и достижение целей.
+      </div>
+    </div>
+
+    <div class="skill-card" onclick="toggleSkill(this)">
+       Креативность
+      <div class="skill-info">
+        Генерация идей, нестандартное мышление и инновационные решения.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CHART -->
+<section class="section reveal">
+  <h2>Влияние Soft Skills на успех</h2>
+  <canvas id="skillsChart"></canvas>
+</section>
+
+<!-- RESEARCH -->
+<section id="research" class="section reveal">
+  <h2>Международные исследования</h2>
+
+  <ul class="links">
+    <li><a href="https://www.oecd.org/pisa/" target="_blank">OECD (PISA)</a></li>
+    <li><a href="https://pz.harvard.edu/" target="_blank">Harvard Project Zero</a></li>
+    <li><a href="https://www.cambridgeassessment.org.uk/" target="_blank">Cambridge Assessment</a></li>
+    <li><a href="https://www.sciencedirect.com/" target="_blank">ScienceDirect</a></li>
+  </ul>
+</section>
+
+<!-- ARTICLES -->
+<section id="articles" class="section reveal">
+  <h2>Научные статьи</h2>
+
+  <div class="article">
+    <h3>Soft Skills and Academic Achievement</h3>
+    <p>Исследование взаимосвязи soft skills и академической успеваемости.</p>
+  </div>
+
+  <div class="article">
+    <h3>The Role of Soft Skills in Education</h3>
+    <p>Как гибкие навыки формируют успешное обучение.</p>
+  </div>
+</section>
+
+<!-- METHODS -->
+<section id="methods" class="section reveal">
+  <h2>Методы развития</h2>
+  <ul>
+    <li> Проектная работа</li>
+    <li> Дискуссии и дебаты</li>
+    <li> Ролевые игры</li>
+    <li> Саморефлексия</li>
+    <li> Командные задания</li>
+  </ul>
+</section>
+
+<!-- EXTRA -->
+<section id="tools" class="section reveal">
+  <h2>Практические инструменты</h2>
+
+  <div class="info-grid">
+    <div class="info-card"> Чек-листы навыков</div>
+    <div class="info-card"> Планировщики целей</div>
+    <div class="info-card"> Самооценка</div>
+    <div class="info-card"> Прогресс-трекинг</div>
+  </div>
+</section>
+
+<!-- CONTACTS -->
+<section id="contacts" class="section reveal">
+  <h2>Контакты</h2>
+  <p>Email: <a href="mailto:mukhametkairov95@mail.ru">mukhametkairov95@mail.ru</a></p>
+  <p>WhatsApp: <a href="https://wa.me/77758284765">+7 775 828 4765</a></p>
+</section>
+
+<footer>
+  © 2025 Soft Skills Project
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
