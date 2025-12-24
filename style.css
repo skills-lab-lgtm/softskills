@@ -1,0 +1,97 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  background: #f7f9fc;
+  color: #222;
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  background: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 40px;
+  box-shadow: 0 4px 10px rgba(0,0,0,.05);
+  z-index: 1000;
+}
+
+.header nav a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+
+.hero {
+  padding: 100px 20px;
+  text-align: center;
+  background: linear-gradient(135deg,#6a85ff,#7fd1ff);
+  color: white;
+}
+
+.primary-btn {
+  margin-top: 20px;
+  padding: 12px 25px;
+  border: none;
+  background: white;
+  color: #333;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+.section {
+  padding: 80px 20px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.skills-grid,
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+  gap: 20px;
+}
+
+.skill-card,
+.info-card {
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+  cursor: pointer;
+  box-shadow: 0 6px 20px rgba(0,0,0,.08);
+  transition: .3s;
+}
+
+.skill-info {
+  display: none;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.skill-card.active .skill-info {
+  display: block;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: 1s;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+footer {
+  text-align: center;
+  padding: 30px;
+  background: #111;
+  color: white;
+}
